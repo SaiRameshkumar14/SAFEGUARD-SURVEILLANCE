@@ -1,0 +1,325 @@
+<!-------------------------------------------Common Head--------------------------------------------------------------->  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="C:/Users/Thilaga/Downloads/Safe-guard-surveillance-main/Safe-guard-surveillance-main/Frontend/styles/home.css"> -->
+    <title>SGS</title>
+</head>
+<body>
+    <div>
+        <img class="backimage" src="https://github-production-user-asset-6210df.s3.amazonaws.com/106983063/241519067-870dc7b3-4570-4806-842d-0bc70f74ae3e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230528%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230528T074032Z&X-Amz-Expires=300&X-Amz-Signature=d19eb5a0b4cb8d8ecfdf9fc833f91f92a84a374da2764bb78656e8a6fc41f91c&X-Amz-SignedHeaders=host&actor_id=106983063&key_id=0&repo_id=584085263" alt="Social">
+        <marque>Welcome to Safe Guard Surveillance</marque>
+        <div class="snow-box">
+            <div class="snow"></div>
+        </div>
+        <div class="content">
+            <nav>
+                <ul class="navbar">
+                    <a href="/Frontend/template/home.html">
+                        <li class="navtextactive">Home</li>
+                    </a>
+                    <a href="/Frontend/template/about.html">
+                        <li class="navtext">About</li>
+                    </a>
+                    <a href="/Frontend/template/faq.html">
+                        <li class="navtext">FAQ</li>
+                    </a>
+                    <a href="/Frontend/template/team.html">
+                        <li class="navtext">Team Members</li>
+                    </a>
+                </ul>
+            </nav>
+<!-------------------------------------------Common Head--------------------------------------------------------------->    
+            <div>
+                <h3 class="texthead" data-text="Get Start Your Surveillance">-</h3>
+            </div>
+            <!-- <button class="startbutton" href = "/start-recording">Monitor</button> -->
+            <button class="startbutton" onclick="window.location.href='/monitor'">Motion Detection</button>
+            <button class="Record" onclick="window.location.href='/start-recording'">Live video Record</button>
+        </div>
+        <a href="/Frontend/template/home.html">
+            <h1 id="textmain">Safe-Guard<br>Surveillance</h1>
+        </a>
+    </div>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=poppins:wght@700&display=swap');
+
+
+/*---------------------------------------------------------------common css------------------------------------------------------------ */
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(37, 6, 63);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.backimage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #140729;
+}
+
+.snow,.snow:after,.snow:before{
+    position: absolute;
+    top: -50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+    radial-gradient(4px 4px at 100px 50px, #fff, transparent),
+    radial-gradient(6px 6px at 200px 150px, #fff, transparent),
+    radial-gradient(3px 3px at 300px 250px, #fff, transparent),
+    radial-gradient(4px 4px at 400px 350px, #fff, transparent),
+    radial-gradient(6px 6px at 500px 100px, #fff, transparent),
+    radial-gradient(3px 3px at 450px 200px, #fff, transparent),
+    radial-gradient(4px 4px at 150px 300px, #fff, transparent),
+    radial-gradient(6px 6px at 250px 400px, #fff, transparent),
+    radial-gradient(3px 3px at 50px 450px, #fff, transparent);
+    background-size: 750px 750px ;
+
+    animation: snowAnim 3s linear;
+    animation-iteration-count: infinite;
+
+}
+
+.snow-box{
+height: 100%;
+}
+.snow:after{
+margin-left: -250px;
+opacity: 0.5;
+filter: blur(2px);
+animation-direction: reverse;
+animation-duration: 7s;
+}
+
+.snow:before{
+margin-left: -250px;
+opacity: 0.7;
+filter: blur(1px);
+animation-direction: reverse;
+animation-duration: 10s;
+}
+
+@keyframes snowAnim{
+from{
+    transform: translateY(0);
+}
+to{
+    transform: translateY(650px);
+}
+}
+
+
+.content{
+    /* website screen */
+position: absolute;
+left: 40%;
+margin-top: 8%;
+width: 58%;
+height: 40vw;
+background: #FFFFFF;
+/* /shadow/2xl */
+box-shadow: 0px 25px 50px -12px rgba(247, 247, 247, 0.668);
+border-radius: 48px;
+}
+
+.navbar , .navbar > a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 3%;
+    height: 5vh;
+    text-decoration: none;
+    list-style: none;
+}
+
+.navtext{
+    font-family: system-ui;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navtext:hover{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navtextactive{
+    cursor: pointer;
+    font-family: system-ui;
+    font-size: 1.4vw;
+    font-weight: bold;
+    color: rgb(59, 2, 90);
+    border-radius: 10% 30%;
+    box-shadow: 0;
+    text-decoration: underline;
+}
+
+/*------------------------------------------------------End common css-------------------------------------------------- */
+
+ /*---------------Start Home.html-------------------------- */
+
+#textmain{
+/* Safe-Guard Surveillance */
+position: absolute;
+width: 50%;
+
+font-family: system-ui;
+font-style: normal;
+font-size: 6vh;
+font-size: 3.5vw;
+line-height: 100%;
+margin-top: 70vh;
+margin-left: -6%;
+/* or 97px */
+text-align: center;
+cursor: pointer;
+text-transform: uppercase;
+text-shadow: 2px 2px 5px rgb(213, 213, 213);
+letter-spacing: 0.10em;
+color: #FFFFFF;
+}
+
+#textmain:hover{
+    font-size: 5vh;
+    font-size: 5vh;
+
+}
+
+
+ /* Scroll  Bar */
+ /* .content::-webkit-scrollbar {
+    width: 10px;
+
+  }
+   
+  /* Handle 
+  .content::-webkit-scrollbar-thumb {
+    background: linear-gradient(rgb(8, 7, 120),rgb(169, 0, 181));
+    border-radius: 10px;
+  }*/
+
+ /*---------- body content -------------*/
+.texthead{
+
+    /*text-decoration-line: underline;*/
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    margin-top: 6%;
+    
+    font-family: system-ui;
+    text-decoration: wavy;
+     /* transition */
+     position: relative;
+     color: rgb(255, 255, 255);
+}
+
+.texthead::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    font-size: 5vh;
+    font-size: 5vw;
+    color: #5c0b6a9c;
+    -webkit-text-stroke: 0vw #e6e6e6; 
+    border-right: 2px solid #25032b;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+
+
+
+.startbutton{
+    position: absolute;
+    cursor: pointer;
+width: 20vh;
+height: 3vw;
+float: left;
+margin-top: 40%;
+margin-left: 20%;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+color: #232020;
+box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
+border-radius: 50px;
+border: none;
+font-size: 2.3vh;
+font-weight: 13%;
+font-family: system-ui;
+
+transition: 0.3s;
+}
+
+.startbutton:hover{
+    background: linear-gradient(90deg, #4815A4 16.67%, #AF55FF 100%);
+    cursor: pointer;
+    color: #FFFFFF;
+}
+.Record{
+    position: relative;
+    cursor: pointer;
+width: 20vh;
+height: 3vw;
+float: right;
+margin-top: 40%;
+margin-right: 20%;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+color: #232020;
+box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
+border-radius: 50px;
+border: none;
+font-size: 2.3vh;
+font-weight: 13%;
+font-family: system-ui;
+
+transition: 0.3s;
+}
+
+.Record:hover{
+    background: linear-gradient(90deg, #4815A4 16.67%, #AF55FF 100%);
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+ /*---------------End Home.html-------------------------- */
+
+    </style>
+<!-------------------------------------------Common foot--------------------------------------------------------------->        
+
+    <script href="/Frontend/script/homs.js"></script>
+</body>
+</html>
+
+<!-------------------------------------------Common foot--------------------------------------------------------------->        
